@@ -57,10 +57,22 @@ def chat(user_input, hist):
 def clear_chat():
     return "", []
 
-# ... (your imports and chat logic remain unchanged)
-
+custom_css = """
+#title-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+#title-icon img {
+    width: 60px;
+    border-radius: 50%;
+}
+"""
 
 page = gr.Blocks(title="Chat With Einstein", theme=gr.themes.Soft(), css=custom_css)
+
 
 with page:
     with gr.Row():
